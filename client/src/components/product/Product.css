@@ -1,0 +1,313 @@
+.section-products {
+  text-align: center;
+}
+
+.section-products h2 {
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--black);
+}
+
+.custom-check {
+  display: block;
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.custom-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: var(--white);
+  border: 1px solid var(--grey-4);
+}
+
+/* On mouse-over, add a grey background color */
+.custom-check:hover input ~ .checkmark {
+  background-color: var(--white);
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-check input:checked ~ .checkmark {
+  background-color: var(--black);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-check .checkmark:after {
+  left: 0.4rem;
+  top: 0.1rem;
+  width: 0.4rem;
+  height: 0.8rem;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.card {
+  flex-direction: column;
+  padding: 2rem;
+  /* box-shadow: var(--box-shadow); */
+  /* background-color: var(--white); */
+  text-align: left;
+}
+
+.card h4 {
+  padding-top: 1rem;
+  font-size: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.card p {
+  display: inline-block;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  color: #535766;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+  color: var(--shipping);
+}
+
+.card-price h2 {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.reteil-price {
+  color: var(--grey-1);
+  font-size: 1.2rem;
+}
+
+.discount {
+  color: var(--discount);
+}
+
+/* Products filter */
+
+.filter {
+  padding: 6rem 0;
+}
+
+.grid-filter {
+  grid-template-columns: 1fr 5fr;
+}
+
+.filter-section h2 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+
+.filter-section {
+  padding: 0 2rem;
+}
+
+.paginationBox {
+  display: flex;
+  justify-content: center;
+  margin: 6vmax;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.page-item {
+  background-color: rgb(255, 255, 255);
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  padding: .5rem 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.page-item:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.page-item:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.page-link {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--black);
+  transition: all 0.3s;
+}
+
+.page-item:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.page-item:hover .page-link {
+  color: var(--black);
+}
+
+.pageItemActive {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.pageItemActive .page-link {
+  color: var(--white);
+}
+
+.pageLinkActive {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .section-products .grid-four-col {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .grid-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .filter {
+    padding: 2rem 0;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card h4 {
+    font-size: 2rem;
+  }
+
+  .card p {
+    font-size: 2rem;
+  }
+
+  .card-price {
+    gap: 2rem;
+    font-size: 2rem;
+  }
+
+  .card-price h2 {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  .reteil-price {
+    color: var(--grey-1);
+    font-size: 2rem;
+  }
+
+  .discount {
+    color: var(--discount);
+  }
+
+  .filter-section {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .container {
+    max-width: 74rem;
+  }
+
+  .section-products .grid-four-col {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card h4 {
+    font-size: 2.4rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card-price h2 {
+    font-weight: 500;
+    font-size: 2.4rem;
+  }
+
+  .card p {
+    font-size: 2.4rem;
+  }
+
+  .grid-filter {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    max-width: 54rem;
+  }
+
+  .section-products .grid-four-col {
+    grid-template-columns: 1fr;
+  }
+
+  .card h4 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card p {
+    font-size: 2rem;
+  }
+
+  .paginationBox {
+    margin: 10vmax 0;
+  }
+}

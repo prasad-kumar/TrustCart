@@ -1,0 +1,132 @@
+.section-orders .container {
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+}
+
+.order-info {
+  margin: 1rem 2rem;
+  padding: 1rem 2rem;
+  grid-template-columns: 2fr 1fr 1fr;
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.product-info img {
+  width: 10%;
+}
+
+.product-info {
+  display: flex;
+  gap: 4rem;
+}
+
+.green-dot {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 1rem;
+  background-color: var(--shipping);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.order-info:nth-child(1) {
+  font-size: 1.4rem;
+}
+
+.order-info:nth-child(2) {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.order-info:nth-child(3) {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.section-order-details .container {
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  padding: 4rem;
+}
+
+.section-order-details .grid {
+  gap: 5rem;
+}
+
+.delivery-address {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.delivery-address h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.delivery-address h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.delivery-address p {
+  font-size: 1.4rem;
+}
+
+.delivery-address span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0 1rem;
+}
+
+.my-orders-h2{
+  padding: 4rem 4rem 0 4rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.product-details{
+  width: 100%;
+}
+
+.product-info p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+@media (max-width: 780px) {
+  .order-info {
+    margin: 2rem;
+    padding: 1rem;
+    grid-template-columns: 3fr 1fr 2fr;
+  }
+
+  .product-info {
+    gap: 2rem;
+  }
+
+  .product-info img {
+    width: 20%;
+  }
+}
+
+@media (max-width: 580px) {
+  .order-info {
+    margin: 2rem;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .product-info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .product-info img {
+    width: 100%;
+  }
+}
